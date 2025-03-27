@@ -5,15 +5,13 @@ menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("hidden");
 });
 
-
-
 //voca buttons
 
 const loadSections = () => {
-  fetch("../json/sections.json")
+  fetch("./json/sections.json")
     .then((res) => res.json())
     .then((data) => {
-     // console.log(data);
+      // console.log(data);
       displaySections(data);
     });
 };
@@ -46,7 +44,7 @@ const displaySections = (sections) => {
 
 const loadContacts = (id) => {
   //console.log(id);
-  fetch(`../json/section-${id}.json`)
+  fetch(`./json/section-${id}.json`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
@@ -81,7 +79,7 @@ const displayContacts = (contact) => {
           <!-- Avatar -->
           <div class="avatar flex justify-center mb-4">
             <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
-              <img src="../assets/profile.png" alt="User Avatar" />
+              <img src="./assets/profile.png" alt="User Avatar" />
             </div>
           </div>
 
@@ -118,12 +116,23 @@ const displayContacts = (contact) => {
 
 // Copy to clipboard function
 const cpy = (phoneNumber) => {
-  navigator.clipboard.writeText(phoneNumber).then(() => {
-    Swal.fire("Copy Successful", `Phone number ${phoneNumber} copied to clipboard!`, "success");
-  }).catch((err) => {
-    console.error('Failed to copy: ', err);
-    Swal.fire("Copy Failed", "Something went wrong, please try again.", "error");
-  });
+  navigator.clipboard
+    .writeText(phoneNumber)
+    .then(() => {
+      Swal.fire(
+        "Copy Successful",
+        `Phone number ${phoneNumber} copied to clipboard!`,
+        "success"
+      );
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+      Swal.fire(
+        "Copy Failed",
+        "Something went wrong, please try again.",
+        "error"
+      );
+    });
 };
 
 loadSections();
