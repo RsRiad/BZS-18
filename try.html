@@ -14,37 +14,40 @@
 </head>
 
 <body>
-    <div class="contact-box p-5 border-red-300 border-4  items-center bg-white rounded-lg grid gap-5 shadow-lg  ">
-        <div class="items-center">
-            <div class="avatar items-center flex justify-center">
-                <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
-                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                </div>
+    <div class="contact-box p-5 border-4 border-red-300 items-center bg-white rounded-lg shadow-lg">
+        <div class="text-center">
+          <!-- Avatar -->
+          <div class="avatar flex justify-center mb-4">
+            <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+              <img src="./assets/profile.png" alt="User Avatar" />
             </div>
-            <h1 class="flex justify-center m-2 font-bold" id="name">Md. Rawha Siddiqi Riad</h1>
-            <div class="flex justify-center">
-                <div class="input m-2 font-bold rounded-2xl">
-                    <div class="">
-                        <i class="fa-solid fa-address-book mr-3"></i>
-                        <input id="number" class="" type="email" placeholder="017********" />
-                    </div>
-                </div>
-            </div>
-           
-            <div class="flex justify-between">
-                <button class="btn bg-[#FF9900] text-black border-[#e17d00]">
-                    <i class="fa-solid fa-phone"></i>                   
-                    Call
-                </button>
-                <button class="btn bg-[#FF9900] text-black border-[#e17d00]">
-                    <i class="fa-solid fa-copy"></i>                    
-                    Copy Number
-                </button>
-            </div>
+          </div>
 
+          <!-- Name -->
+          <h1 class="font-bold text-xl mb-2" id="name">${man.name}</h1>
+
+          <!-- Phone Number -->
+          <div class="flex justify-center">
+            <div class="input m-2 font-bold rounded-2xl">
+              <div class="flex items-center">
+                <i class="fa-solid fa-address-book mr-3"></i>
+                <input id="number" disabled value="${man.phone}" class="w-48 sm:w-72 p-2 " type="text" placeholder="017********" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Buttons: Call & Copy -->
+          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+            <button id="call" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
+            <a href="tel:${man.phone}" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
+              <i class="fa-solid fa-phone mr-2"></i> Call
+            </button>
+            <button id="${man.id}" onClick="cpy('${man.phone}')" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
+              <i class="fa-solid fa-copy mr-2"></i> Copy Number
+            </button>
+          </div>
         </div>
-
-    </div>
+      </div>
 </body>
 
 </html>

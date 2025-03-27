@@ -97,14 +97,19 @@ const displayContacts = (contact) => {
           </div>
 
           <!-- Buttons: Call & Copy -->
-          <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <div class="flex flex-col sm:flex-row gap-3 justify-between">
+            <div>
             <button id="call" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
-            <a href="tel:${man.phone}" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
-              <i class="fa-solid fa-phone mr-2"></i> Call
+              <a href="tel:${man.phone}" >
+                <i class="fa-solid fa-phone mr-2"></i> Call
+              </a>
             </button>
+            </div>
+            <div>
             <button id="${man.id}" onClick="cpy('${man.phone}')" class="btn bg-[#FF9900] text-black border-[#e17d00] w-full sm:w-auto flex items-center justify-center py-2 px-4 rounded-lg">
               <i class="fa-solid fa-copy mr-2"></i> Copy Number
             </button>
+            </div>
           </div>
         </div>
       </div>
