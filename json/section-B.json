@@ -1,0 +1,13 @@
+{
+    "status": true,
+    "message": "successfully fetched all the Contacts data", 
+    "data": [
+      {
+        "id": 0,
+        "phone": 0, 
+        "section_no": "A",
+        "name": "" 
+      }
+      
+    ]
+  }

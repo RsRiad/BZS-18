@@ -1,0 +1,27 @@
+{
+    "status": true,
+    "message": "successfully fetched all the Sections data",
+    "data": [
+      {
+        "id": 101,
+        "section_no": "A",
+        "sectionName": "Section-A"
+      },
+      {
+        "id": 102,
+        "section_no": "B",
+        "sectionName": "Section-B"
+      },
+      {
+        "id": 103,
+        "section_no": "C",
+        "sectionName": "Section-C"
+      },
+      {
+        "id": 104,
+        "section_no": "D",
+        "sectionName": "Section-D"
+      }
+      
+    ]
+  }

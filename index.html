@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/b5d80d40a4.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+    </style>
+    <title>Our Contacts</title>
+</head>
+
+<body>
+    <header>
+        <nav class="bg-[#ebedf3] border-b-2 border-[#E0E7FF] fixed top-0 left-0 w-full z-50" id="navbar">
+            <div class="flex justify-between items-center w-11/12 mx-auto py-2">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="./assets/logo.png" class="w-[30px] h-[30px] mr-2" alt="Logo">
+                    <p class="font-bold text-2xl text-sky-400">BZS-18</p>
+                </div>
+    
+                <!-- Desktop Search Bar -->
+                <div class="hidden md:flex items-center gap-3">
+                    <div class="relative">
+                        <input type="search" class="pl-10 pr-4 py-2 rounded-3xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-400" required placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    </div>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-gray-600 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+    
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-[#ebedf3] border-t-2 border-[#E0E7FF] py-3">
+                <div class="w-11/12 mx-auto">
+                    <div class="relative">
+                        <input type="search" class="w-full pl-10 pr-4 py-2 rounded-3xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-sky-400" required placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+
+        
+    </header>
+
+
+
+    <main class="bg-gray-50" id="mainpart">
+        <div class="flex justify-center pt-4 px-4">
+            <div class="w-full max-w-6xl">
+                <!-- Title -->
+                <h1 class="font-bold text-3xl mb-2 flex justify-center mt-20">
+                    <span class="text-[#00BCFF] animate-pulse">Our </span> Contacts
+                </h1>
+    
+                <!-- Dynamic sections button -->
+                <div id="sections" class="flex gap-3 items-center justify-center mt-5 flex-wrap">
+                    <!-- Buttons will be dynamically inserted here -->
+                </div>
+    
+                <!-- Dynamic contacts -->
+                <div id="contacts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-gray-50 rounded-2xl px-3 py-4 mt-6">
+                    <!-- Contacts will be dynamically inserted here -->
+                </div>
+    
+                <!-- No contacts message -->
+                <div id="no-contact" class="bg-gray-50 text-center py-32 rounded-2xl grid gap-3">
+                    <p class="text-2xl text-[#62748E]">আপনি এখনো কোন Section Select করেন নি।</p>
+                    <h1 class="text-4xl">একটি Section Select করুন।</h1>
+                </div>
+            </div>
+        </div>
+    
+        <!-- FAQ Modal (Optional) -->
+        <!-- <dialog id="word_details" class="modal">
+        </dialog> -->
+    </main>
+    
+
+
+    <!-- <footer id="footer" class=" mt-8 border-[#FFEBEB] border-t-3">
+        <div class="container mx-auto flex justify-between py-20">
+            <div class="grid gap-3">
+                <p class="text-black flex items-center font-bold">ইংরেজি শিখুন সহজে</p>
+                <p class="text-sm text-gray-500">Providing ED-Tech Applications since 2025</p>
+            </div>
+
+            <div class="flex flex-col justify-end">
+                <h6 class="footer-title text-sm">Follow Us</h6>
+                <div class="flex gap-4">    
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>                    
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
